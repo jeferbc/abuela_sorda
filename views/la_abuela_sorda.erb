@@ -1,0 +1,15 @@
+
+<% if @answer %>
+  <% if @answer.upcase! == nil %>
+    <h1>Ahhh si, manzanas!</h1>
+  <% else %>
+    <h1>Habla más duro mijito</h1>
+  <% end %>
+<% else %>
+  <h1>Abuela Sorda</h1>
+  <p>Di algo abuela</p>
+  <form action="/respuesta" method="post">
+    <input type="text" name="respuesta">
+    <input type="submit" value="Dilo!">
+  </form>
+  <% end %>
